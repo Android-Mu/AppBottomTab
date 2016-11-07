@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppBottomTab</string>
+
+    <!--<string name="main_tab_name_news">发现</string>-->
+    <string name="main_tab_name_tweet">关注</string>
+    <string name="main_tab_name_quick">消息</string>
+    <!--<string name="main_tab_name_question">我的</string>-->
+    <string name="main_tab_name_my">我的</string>
+    <string name="main_tab_name_explore">发现</string>
+</resources>

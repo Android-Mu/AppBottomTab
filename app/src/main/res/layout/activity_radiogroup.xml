@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_contains_fr"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <RadioGroup
+        android:id="@+id/rg_tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/radio_homepage"
+            android:gravity="center_horizontal"
+            android:text="发现"
+            android:textColor="@color/radio_text_bg"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_rebate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/radio_ordersearch"
+            android:gravity="center_horizontal"
+            android:text="关注"
+            android:textColor="@color/radio_text_bg"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_personal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/radio_personal"
+            android:gravity="center_horizontal"
+            android:text="消息"
+            android:textColor="@color/radio_text_bg"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="3dp"
+            android:drawableTop="@drawable/radio_my"
+            android:gravity="center_horizontal"
+            android:text="我的"
+            android:textColor="@color/radio_text_bg"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+</LinearLayout>

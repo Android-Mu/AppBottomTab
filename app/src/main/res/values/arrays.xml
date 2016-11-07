@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- 使用 -->
+    <string-array name="main_titles_arrays">
+        <item>@string/main_tab_name_explore</item>
+        <item>@string/main_tab_name_tweet</item>
+        <item>@string/main_tab_name_quick</item>
+        <item>@string/main_tab_name_my</item>
+    </string-array>
+
+</resources>
