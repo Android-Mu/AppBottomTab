@@ -25,5 +25,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical" />
 
+        <!-- 快速操作按钮 中间的tab -->
+        <ImageView
+            android:id="@+id/quick_option_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/cb_icon_pen_normal"/>
     </FrameLayout>
 </LinearLayout>

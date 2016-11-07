@@ -14,10 +14,14 @@ public enum MainTab {
     TWEET(1, R.string.main_tab_name_tweet, R.drawable.radio_ordersearch,
             SecondFragment.class),
 
-    QUICK(2, R.string.main_tab_name_quick, R.drawable.radio_personal,
+    // 中间的tab
+    CENTER(2, R.string.main_tab_name_explore, R.drawable.radio_center,
+            null),
+
+    QUICK(3, R.string.main_tab_name_quick, R.drawable.radio_personal,
             ThirdFragment.class),
 
-    EXPLORE(3, R.string.main_tab_name_my, R.drawable.radio_my,
+    EXPLORE(4, R.string.main_tab_name_my, R.drawable.radio_my,
             FourthFragment.class);
 
     private int idx;

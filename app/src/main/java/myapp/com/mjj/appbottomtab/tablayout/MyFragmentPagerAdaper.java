@@ -30,8 +30,11 @@ public class MyFragmentPagerAdaper extends FragmentPagerAdapter {
             case 1:
                 return new SecondFragment();
             case 2:
-                return new ThirdFragment();
+                // 点击中间tab时，为了验证结果，这里重复创建了一个FourthFragment.
+                return new FourthFragment();
             case 3:
+                return new ThirdFragment();
+            case 4:
                 return new FourthFragment();
         }
         return null;

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import myapp.com.mjj.appbottomtab.R;
 
@@ -60,8 +61,19 @@ public class FrTabHostStyleAct extends AppCompatActivity implements TabHost.OnTa
             Drawable drawable = this.getResources().getDrawable(mainTab.getResIcon());
             icon.setImageDrawable(drawable);
 
-            title.setText(getString(mainTab.getResName()));
+            // 中间添加tab处理
+            if (i == 2) {
+                // 当点击了中间tab时，其它tab状态恢复为默认
+                title.setText("");
+                icon.setImageDrawable(null);
+                // 当点击了中间tab时，记录在此之前被点击的tab,方便恢复
+//                indicator.setVisibility(View.INVISIBLE);
+                mTabHost.setNoTabChangedTag(getString(mainTab.getResName()));
+            } else {
+                title.setText(getString(mainTab.getResName()));
+            }
             tab.setIndicator(indicator);
+
             mTabHost.addTab(tab, mainTab.getClz(), null);
             mTabHost.getTabWidget().getChildAt(i).setOnTouchListener(this);
         }
@@ -74,12 +86,16 @@ public class FrTabHostStyleAct extends AppCompatActivity implements TabHost.OnTa
             View v = mTabHost.getTabWidget().getChildAt(i);
             if (i == mTabHost.getCurrentTab()) {
                 v.setSelected(true);
-                mTitle = mTitles[i == 3 ? i - 1 : i];
+//                mTitle = mTitles[i == 3 ? i - 1 : i];
+                if (2 == i) {
+                    Toast.makeText(FrTabHostStyleAct.this, "中间tab已添加", Toast.LENGTH_SHORT).show();
+                }
+                // 中间增加tab
+                mTitle = mTitles[i == 4 || i == 3 ? i - 1 : i];
             } else {
                 v.setSelected(false);
             }
         }
-        supportInvalidateOptionsMenu();
     }
 
     @Override
